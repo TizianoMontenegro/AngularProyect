@@ -1,18 +1,17 @@
 <div class="wrapper">
     <header class="header">
         <nav class="nav">
-            <div class="menu">
-                <div class="button" (click)="showHideMenu()">
-                    <i #refIconButton class='bx bx-menu'></i>
-                </div>
-                <div #refLinks class="links">
-                    <a [routerLink]="['/']" (click)="clickOnLink()">HOME</a>
-                    <a [routerLink]="['/about-me']" (click)="clickOnLink()">ABOUT ME</a>
-                    <a [routerLink]="['/support']" (click)="clickOnLink()">SUPPORT</a>
-                </div>
-                
+            <div class="button" (click)="showHideMenu()">
+                <i #refIconButton class='bx bx-menu'></i>
             </div>
+            <img class="logo" src="../assets/T.M..png" alt="LOGO">
         </nav>
+
+        <div #refLinks class="links">
+            <a [routerLink]="['/']" (click)="clickOnLink()">HOME</a>
+            <a [routerLink]="['/about-me']" (click)="clickOnLink()">ABOUT ME</a>
+            <a [routerLink]="['/support']" (click)="clickOnLink()">SUPPORT</a>
+        </div>
     </header>
     <router-outlet></router-outlet>
 </div>

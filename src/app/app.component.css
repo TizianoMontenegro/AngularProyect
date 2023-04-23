@@ -1,32 +1,41 @@
 .wrapper{}
 .wrapper .header{
-    background-color: aquamarine;
-    width: 100%;
-    height: 60px;
+    /* background-color: aquamarine; */
+    /* width: 100%;
+    height: 60px; */
 }
 .wrapper .header .nav{
     width: 100%;
-    height: 100%;
+    height: 45px;
     background-color: rgb(253, 253, 75);
+    display: flex;
+    overflow: hidden;
+    /* box-shadow: 0 0 3px #000; */
 }
-.wrapper .header .nav .menu{
-    position: relative;
-}
-.wrapper .header .nav .menu .button{
-    background-color: chartreuse;
-    position: absolute;
+.wrapper .header .nav .button{
+    background-color: rgb(253, 253, 75);
+    /* background-color: chartreuse; */
+    /* position: absolute; */
     z-index: 100;
     width: 45px;
     height: 45px;
-    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: 1px solid #000;
 }
-.wrapper .header .nav .menu .button i{
+.wrapper .header .nav .button i{
     font-size: 2.5em;
 }
-.wrapper .header .nav .menu .links{
+.wrapper .header .logo{
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    /* box-shadow: 0 0 10px #000; */
+    border-radius: 50%;
+    margin-right: 1em;
+}
+.wrapper .header .links{
     background-color: rgba(137, 43, 226, 0.454);
     position: absolute;
     z-index: 50;
@@ -36,14 +45,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
+    /* gap: 2.3em; */
+    top: 0;
     left: -100%;
     transition: transform .3s ease-out;
+    background: url("../assets/T.M..png");
+    background-size: 14%;
+    overflow: hidden;
 }
-.wrapper .header .nav .menu .links.toRight{
+.wrapper .header .links.toRight{
     transform: translateX(100%);
 }
-.wrapper .header .nav .menu .links a{
+.wrapper .header .links a{
     font-size: 1.8em;
     text-decoration: none;
+    color: #fff;
+    padding: 0 100%;
+    white-space: nowrap;
+    transition: background-color .2s .1s, color .1s;
+}
+.wrapper .header .links a:hover{
+    transition: background-color .6s, color .3s;
+    color: #000;
+    background-color: rgb(253, 253, 75);
 }

@@ -1,0 +1,52 @@
+.wrapper{}
+.wrapper .header{
+    background: url("../../assets/T.M..png") 
+    #101010 
+    fixed
+    center center
+    no-repeat;
+    width: 100%;
+    min-height: calc(100vh - 45px);
+}
+.wrapper .main{
+    width: 100%;
+    /* min-height: a;< */
+    padding: 1em;
+}
+.wrapper .main .cards{
+    background-color: antiquewhite;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: space-around;
+    align-content: center;
+    gap: 1em;
+}
+.wrapper .main .cards .card:first-child{
+    /* grid-column: 1 / 3; */
+}
+.wrapper .main .cards .card img{
+    background-color: aquamarine;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.wrapper .main .cards .card p{
+    background-color: orange;
+    width: 100%;
+}
+
+@media (max-width: 1113px) {
+    .wrapper .main .cards .card:first-child{
+        grid-column: 1 / 3;
+    }
+
+}
+@media (max-width: 747px) {
+    .wrapper .main .cards .card:first-child{
+        grid-column: unset;
+    }
+
+}
