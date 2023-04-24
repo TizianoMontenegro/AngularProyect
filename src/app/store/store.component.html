@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <header class="header">
+        <input #inpSearch type="search" placeholder="Buscar">
+        <div class="cart-button" (click)="showHideCart()">
+            <i class='bx bx-cart-alt'></i>
+            <p>Carrito</p>
+        </div>
+        <div class="cart" #cart>
+            <h1>askdasjdjasfja</h1>
+        </div>
+    </header>
+    <div class="welcome">
+        <h1>Meals</h1>
+        <div class="meals">
+            <div class="meal" *ngFor="let meal of meals.meals">
+                <img src="{{ meal.strMealThumb }}" alt="meal">
+                <h2>{{ meal.strMeal }}</h2>
+                <button>ANADIR AL CARRITO <i class='bx bx-cart-add'></i></button>
+            </div>
+        </div>
+    </div>
+</div>  

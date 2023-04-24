@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { SupportComponent } from './support/support.component';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutMeComponent,
-    SupportComponent
+    StoreComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
